@@ -6,13 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rwStudentList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCurStudent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scrollbars="vertical"/>
+
     <TextView
+        android:id="@+id/tvCurStudent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Current Student"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextStudent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvStudentTitleSelected" />
+
+    <TextView
+        android:id="@+id/tvStudentTitleSelected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="Current Student:"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextStudent"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/btnNextStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Student"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnTransformStudent" />
+
+    <Button
+        android:id="@+id/btnTransformStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transform Student"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

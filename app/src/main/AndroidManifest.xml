@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TmsTemp">
         <activity
+            android:name=".SecondActivity"
+            android:exported="false"
+            android:label="@string/title_activity_second"
+            android:theme="@style/Theme.TmsTemp.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
